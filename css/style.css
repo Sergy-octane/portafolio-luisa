@@ -17,6 +17,12 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;            /* flex para organizar h1 y nav */
+    flex-direction: column;   /* h1 arriba, nav abajo */
+    align-items: center; 
 }
 
 header h1 {
@@ -33,11 +39,15 @@ nav ul {
     justify-content: center;
     gap: 20px;
 }
-
 nav ul li a {
-    color: white;
-    text-decoration: none;
+    color:var(--rosa-claro);            /* color base blanco */
+    text-decoration: none;    /* quita el subrayado */
     font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--rosa-fuerte);
+    transition: 0.3s;
 }
 
 /* Secciones */
@@ -63,6 +73,12 @@ h2 {
     width: 45%;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
 /* Footer */
@@ -72,4 +88,24 @@ footer {
     text-align: center;
     padding: 15px;
     margin-top: 30px;
+}
+.foto-circular {
+    width: 150px;        /* tamaño de la foto */
+    height: 150px;       /* igual que el ancho para que sea círculo */
+    border-radius: 50%;  /* hace que sea redonda */
+    object-fit: cover;   /* recorta para que no se deforme */
+    display: block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* sombra suave */
+    margin: left;
+}
+.sobre-mi-contenedor {
+    display: flex;
+    align-items: center; /* centra verticalmente la foto con el texto */
+    gap: 20px;           /* espacio entre la foto y el texto */
+    flex-wrap: wrap;     /* para que en pantallas pequeñas se acomode debajo */
+    justify-content: flex-start; /* empuja todo hacia la izquierda */
+    flex-wrap: wrap;          /* se acomoda en móviles */
+    max-width: 100%;             /* ocupa todo el ancho de la página */
+    margin: 0;                   /* quita márgenes automáticos */
+    padding-left: 20px;          /* pequeño espacio desde el borde izquierdo */
 }
