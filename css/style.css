@@ -90,22 +90,92 @@ footer {
     margin-top: 30px;
 }
 .foto-circular {
-    width: 150px;        /* tamaño de la foto */
-    height: 150px;       /* igual que el ancho para que sea círculo */
+    width: 250px;        /* tamaño de la foto */
+    height: 250px;       /* igual que el ancho para que sea círculo */
     border-radius: 50%;  /* hace que sea redonda */
     object-fit: cover;   /* recorta para que no se deforme */
     display: block;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* sombra suave */
-    margin: left;
+    margin: auto;
+    margin-top: -30px;
 }
 .sobre-mi-contenedor {
     display: flex;
     align-items: center; /* centra verticalmente la foto con el texto */
-    gap: 20px;           /* espacio entre la foto y el texto */
+    gap: 30px;           /* espacio entre la foto y el texto */
     flex-wrap: wrap;     /* para que en pantallas pequeñas se acomode debajo */
     justify-content: flex-start; /* empuja todo hacia la izquierda */
     flex-wrap: wrap;          /* se acomoda en móviles */
     max-width: 100%;             /* ocupa todo el ancho de la página */
     margin: 0;                   /* quita márgenes automáticos */
     padding-left: 20px;          /* pequeño espacio desde el borde izquierdo */
+}
+.sobre-mi p {
+    max-width: 600px; /* Limita el ancho del texto para una mejor lectura */
+    text-align: left;
+}
+/* En tu archivo style.css */
+.btn-volver-arriba {
+    position: fixed; /* Posición fija en la pantalla */
+    bottom: 20px; /* 20px desde la parte inferior */
+    right: 30px; /* 30px desde la derecha */
+    z-index: 99; /* Asegura que esté por encima de otros elementos */
+    border: none;
+    outline: none;
+    background-color: var(--rosa-fuerte);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    display: none; /* Oculto por defecto */
+    transition: background-color 0.3s;
+}
+
+.btn-volver-arriba:hover {
+    background-color: #d15c89;
+}
+/* Media Queries para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    /* Ajustes para el encabezado */
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    /* Ajustes para las secciones */
+    section {
+        padding: 20px 10px;
+    }
+
+    /* Ajustes para la galería */
+    .galeria {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .galeria img {
+        width: 100%; /* Las imágenes ocupan todo el ancho en móviles */
+    }
+    
+    /* Ajustes para la sección "Sobre mí" */
+    #sobre-mi .sobre-mi-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #sobre-mi p {
+        text-align: center;
+    }
 }
