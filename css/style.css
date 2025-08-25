@@ -7,7 +7,9 @@
 
 /* Estilo general */
 body {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Ibarra Real Nova', serif;
+     font-size: 18px; /* un poquito más grande */
+    line-height: 1.6; /* mejora la lectura */
     margin: 0;
     background-color:var(--rosa-claro);
     color:var(--gris-oscuro);
@@ -184,4 +186,66 @@ footer {
     #sobre-mi p {
         text-align: center;
     }
+}
+#servicios {
+  text-align: left; /* que no quede todo centrado */
+  max-width: 800px; /* que no se extienda demasiado */
+  margin: 0 auto;   /* lo centra en la página */
+  padding: 2rem;
+}
+
+#servicios h2 {
+  text-align: center; /* título sí centrado */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#servicios ul {
+  list-style: none; /* quitamos los puntos feos */
+  padding: 0;
+}
+
+#servicios li {
+  margin: 1rem 0;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* decoramos con un "check" bonito en vez de punto */
+#servicios li::before {
+  content: "✔";
+  color: #4CAF50; /* verde elegante */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#habilidades {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+#habilidades h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#habilidades ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* espacio entre items */
+}
+
+#habilidades li {
+  background: #f4f4f4;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
