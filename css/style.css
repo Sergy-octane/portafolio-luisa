@@ -21,16 +21,23 @@ h1, h2, h3 {
 
 /* Encabezado */
 header {
-    background-color: #281E5D;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;            /* flex para organizar h1 y nav */
-    flex-direction: column;   /* h1 arriba, nav abajo */
-    align-items: center; 
+background: linear-gradient(270deg, #000000, #1a1a1a, #002b5c, #FA8FB1);
+  background-size: 600% 600%;
+  animation: gradientMove 15s ease infinite;
+  color: white;
+  padding: 10 px 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 header h1 {
