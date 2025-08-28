@@ -2,7 +2,7 @@
     --rosa-fuerte: #FA8FB1;
     --blanco-roto:#F8F0E5;
     --gris-oscuro:var#333333;
-
+    --azul-ligero:#89CFF0;
 }
 
 /* Estilo general */
@@ -15,13 +15,13 @@ body {
     color:var(--gris-oscuro);
 }
 h1, h2, h3 {
-    color: var(--rosa-fuerte); /* Títulos en rosa fuerte */
+    color: var(--azul-ligero); /* Títulos en rosa fuerte */
     font-family: 'Poppins', sans-serif; /* Solo títulos */
 }
 
 /* Encabezado */
 header {
-    background-color: #000;
+    background-color: #281E5D;
     color: white;
     padding: 20px;
     text-align: center;
@@ -92,7 +92,7 @@ h2 {
 
 /* Footer */
 footer {
-    background-color: #000;
+    background-color: #281E5D;
     color: white;
     text-align: center;
     padding: 15px;
